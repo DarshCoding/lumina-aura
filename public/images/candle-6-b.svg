@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1400" viewBox="0 0 1400 1400" role="img" aria-label="Mist detail">
+  <rect width="1400" height="1400" fill="#202428"/>
+  <circle cx="700" cy="620" r="260" fill="#9A7B4F" opacity="0.12"/>
+  <rect x="560" y="520" width="280" height="420" rx="6" fill="#EEF0F0" opacity="0.9"/>
+  <rect x="696" y="430" width="8" height="100" fill="#333"/>
+  <ellipse cx="700" cy="400" rx="22" ry="48" fill="#9A7B4F"/>
+  <text x="700" y="1120" text-anchor="middle" fill="#EEF0F0" font-family="Georgia, serif" font-size="28" letter-spacing="6" opacity="0.4">MIST</text>
+</svg>

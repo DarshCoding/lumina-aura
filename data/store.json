@@ -1,0 +1,195 @@
+{
+  "products": [
+    {
+      "id": "p-aurora",
+      "title": "Aurora Ember",
+      "description": "A soft amber glow with notes of sandalwood and warm vanilla. Hand-poured in small batches for a calm evening ritual.",
+      "code": "LA-AE-001",
+      "images": [
+        "/images/candle-1.svg",
+        "/images/candle-1-b.svg"
+      ],
+      "price": 1899,
+      "discountPercent": 15,
+      "discountPrice": 1614,
+      "stock": 42,
+      "category": "Signature",
+      "scent": "Sandalwood · Vanilla",
+      "burnTime": "45 hours",
+      "featured": true,
+      "createdAt": "2026-01-10T10:00:00.000Z",
+      "updatedAt": "2026-01-10T10:00:00.000Z"
+    },
+    {
+      "id": "p-nocturne",
+      "title": "Nocturne Bloom",
+      "description": "Night-blooming jasmine wrapped in soft musk. A quiet, luminous presence for late hours and reading corners.",
+      "code": "LA-NB-002",
+      "images": [
+        "/images/candle-2.svg",
+        "/images/candle-2-b.svg"
+      ],
+      "price": 2199,
+      "discountPercent": 10,
+      "discountPrice": 1979,
+      "stock": 28,
+      "category": "Floral",
+      "scent": "Jasmine · Musk",
+      "burnTime": "50 hours",
+      "featured": true,
+      "createdAt": "2026-01-12T10:00:00.000Z",
+      "updatedAt": "2026-01-12T10:00:00.000Z"
+    },
+    {
+      "id": "p-solstice",
+      "title": "Solstice Cedar",
+      "description": "Crisp cedarwood and smoked tea for grounded interiors. Designed for long, steady burns through winter evenings.",
+      "code": "LA-SC-003",
+      "images": [
+        "/images/candle-3.svg",
+        "/images/candle-3-b.svg"
+      ],
+      "price": 2499,
+      "discountPercent": 0,
+      "discountPrice": 2499,
+      "stock": 17,
+      "category": "Woody",
+      "scent": "Cedar · Smoked Tea",
+      "burnTime": "55 hours",
+      "featured": true,
+      "createdAt": "2026-02-01T10:00:00.000Z",
+      "updatedAt": "2026-09-11T09:29:41.010Z"
+    },
+    {
+      "id": "p-linen",
+      "title": "Linen Hour",
+      "description": "Fresh linen and pale citrus — light, clean, and airy. Ideal for morning rituals and open studios.",
+      "code": "LA-LH-004",
+      "images": [
+        "/images/candle-4.svg",
+        "/images/candle-4-b.svg"
+      ],
+      "price": 1599,
+      "discountPercent": 20,
+      "discountPrice": 1279,
+      "stock": 55,
+      "category": "Fresh",
+      "scent": "Linen · Citrus",
+      "burnTime": "40 hours",
+      "featured": false,
+      "createdAt": "2026-02-08T10:00:00.000Z",
+      "updatedAt": "2026-02-08T10:00:00.000Z"
+    },
+    {
+      "id": "p-velvet",
+      "title": "Velvet Ember",
+      "description": "Deep cocoa and soft spice in a matte vessel. A richer profile for intimate gatherings and cooler nights.",
+      "code": "LA-VE-005",
+      "images": [
+        "/images/candle-5.svg",
+        "/images/candle-5-b.svg"
+      ],
+      "price": 2799,
+      "discountPercent": 12,
+      "discountPrice": 2463,
+      "stock": 14,
+      "category": "Gourmand",
+      "scent": "Cocoa · Spice",
+      "burnTime": "60 hours",
+      "featured": true,
+      "createdAt": "2026-02-15T10:00:00.000Z",
+      "updatedAt": "2026-02-15T10:00:00.000Z"
+    },
+    {
+      "id": "p-mist",
+      "title": "Coastal Mist",
+      "description": "Sea salt, driftwood, and a whisper of bergamot. Evokes open windows and quiet shorelines.",
+      "code": "LA-CM-006",
+      "images": [
+        "/images/candle-6.svg",
+        "/images/candle-6-b.svg"
+      ],
+      "price": 1999,
+      "discountPercent": 5,
+      "discountPrice": 1899,
+      "stock": 32,
+      "category": "Fresh",
+      "scent": "Sea Salt · Bergamot",
+      "burnTime": "48 hours",
+      "featured": false,
+      "createdAt": "2026-03-01T10:00:00.000Z",
+      "updatedAt": "2026-09-11T09:28:11.097Z"
+    }
+  ],
+  "billings": [],
+  "hampers": [
+    {
+      "id": "7a627349-2221-4be8-bdf8-b36cf255970f",
+      "reference": "LA-GH-0001",
+      "customerName": "test name",
+      "customerEmail": "test@email.com",
+      "customerPhone": "1234567890",
+      "candle": {
+        "productId": "p-mist",
+        "id": "p-mist",
+        "label": "Coastal Mist",
+        "price": 1899
+      },
+      "fragrance": {
+        "id": "frag-jasmine",
+        "label": "Night Jasmine",
+        "price": 149
+      },
+      "color": {
+        "id": "color-ink",
+        "label": "Charcoal",
+        "price": 149
+      },
+      "flower": {
+        "id": "flower-eucalyptus",
+        "label": "Eucalyptus bundle",
+        "price": 349
+      },
+      "packagingFee": 199,
+      "logoFee": 0,
+      "total": 2745,
+      "notes": "Test gift note",
+      "status": "pending",
+      "createdAt": "2026-09-11T09:28:11.098Z"
+    },
+    {
+      "id": "f5906529-e15e-4a4a-953f-4186e3feff50",
+      "reference": "LA-GH-0002",
+      "customerName": "this another",
+      "customerEmail": "test@test.com",
+      "customerPhone": "123456789",
+      "candle": {
+        "productId": "p-solstice",
+        "id": "p-solstice",
+        "label": "Solstice Cedar",
+        "price": 2499
+      },
+      "fragrance": {
+        "id": "frag-cocoa",
+        "label": "Velvet Cocoa",
+        "price": 249
+      },
+      "color": {
+        "id": "color-blush",
+        "label": "Blush",
+        "price": 99
+      },
+      "flower": {
+        "id": "flower-none",
+        "label": "No flowers",
+        "price": 0
+      },
+      "packagingFee": 199,
+      "logoFee": 0,
+      "total": 3046,
+      "notes": "This is new note with hearts",
+      "status": "pending",
+      "createdAt": "2026-09-11T09:29:41.010Z"
+    }
+  ]
+}
