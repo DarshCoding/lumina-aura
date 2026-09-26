@@ -67,14 +67,32 @@ export function ProductForm({ initial, onSaved, onCancel }) {
   async function uploadFiles(files) {
     if (!files?.length) return;
     setUploading(true);
+    setError("");
     try {
       const urls = [];
       for (const file of Array.from(files)) {
+        if (file.size > 10 * 1024 * 1024) {
+          throw new Error(`${file.name} must be under 10MB`);
+        }
         const fd = new FormData();
         fd.append("file", file);
-        const res = await fetch("/api/upload", { method: "POST", body: fd });
-        const data = await res.json();
+        const res = await fetch("/api/upload", {
+          method: "POST",
+          body: fd,
+          credentials: "same-origin",
+        });
+        let data = {};
+        try {
+          data = await res.json();
+        } catch {
+          throw new Error(
+            res.status === 413
+              ? "Image is too large for the server"
+              : "Upload failed"
+          );
+        }
         if (!res.ok) throw new Error(data.error || "Upload failed");
+        if (!data.url) throw new Error("Upload failed");
         urls.push(data.url);
       }
       setForm((f) => ({ ...f, images: [...f.images, ...urls] }));

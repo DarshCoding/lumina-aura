@@ -12,6 +12,7 @@ import ProductsPage from "@/pages/admin/ProductsPage";
 import InventoryPage from "@/pages/admin/InventoryPage";
 import BillingsPage from "@/pages/admin/BillingsPage";
 import HampersPage from "@/pages/admin/HampersPage";
+import SiteContentPage from "@/pages/admin/SiteContentPage";
 import { AdminGuard } from "@/components/admin/AdminGuard";
 import { AdminShell } from "@/components/admin/AdminShell";
 
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="inventory" element={<InventoryPage />} />
           <Route path="billings" element={<BillingsPage />} />
           <Route path="hampers" element={<HampersPage />} />
+          <Route path="content" element={<SiteContentPage />} />
         </Route>
       </Route>
     </Routes>

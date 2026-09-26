@@ -38,12 +38,13 @@ export function SiteHeader() {
             : "bg-transparent"
         )}
       >
-        <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 md:px-10">
-          <Link
-            to="/"
-            className="font-display text-sm font-semibold tracking-brand uppercase text-ink"
-          >
-            Lummina Aura
+        <div className="mx-auto flex h-24 max-w-[1400px] items-center justify-between px-6 md:h-28 md:px-10">
+          <Link to="/" className="flex shrink-0 items-center">
+            <img
+              src="/images/logo.png"
+              alt="Lumina Aura — Wax & Perfume Candles"
+              className="h-16 w-auto md:h-20"
+            />
           </Link>
 
           <nav className="hidden items-center gap-10 md:flex">

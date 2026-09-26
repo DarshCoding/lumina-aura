@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\BillingController;
 use App\Http\Controllers\Api\HamperController;
 use App\Http\Controllers\Api\InventoryController;
+use App\Http\Controllers\Api\PageContentController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\StatsController;
 use App\Http\Controllers\Api\UploadController;
@@ -29,6 +30,10 @@ Route::prefix('api')->group(function () {
     Route::post('hampers/upload', [UploadController::class, 'hamperLogo']);
 
     Route::get('stats', [StatsController::class, 'index'])->middleware('admin.auth');
+
+    Route::get('page-sections', [PageContentController::class, 'index']);
+    Route::put('page-sections/{id}', [PageContentController::class, 'update'])->middleware('admin.auth');
+    Route::put('page-sections', [PageContentController::class, 'bulkUpdate'])->middleware('admin.auth');
 
     Route::post('upload', [UploadController::class, 'store'])->middleware('admin.auth');
 });

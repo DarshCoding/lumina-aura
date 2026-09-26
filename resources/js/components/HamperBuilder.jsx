@@ -469,6 +469,15 @@ export function HamperBuilder({ candles }) {
           <p className="text-xs tracking-widest uppercase text-flame">
             Hamper total
           </p>
+          {selectedCandle && (
+            <div className="mt-6 overflow-hidden bg-paper-dark">
+              <img
+                src={selectedCandle.images?.[0] || "/images/candle-1.svg"}
+                alt={selectedCandle.title}
+                className="aspect-[4/3] w-full object-cover"
+              />
+            </div>
+          )}
           <p className="mt-4 font-display text-4xl tracking-tight transition-all duration-300">
             {formatCurrency(breakdown.total)}
           </p>

@@ -216,5 +216,7 @@ class DatabaseSeeder extends Seeder
                 'flower_price_charged' => 0,
             ]);
         });
+
+        $this->call(PageSectionSeeder::class);
     }
 }

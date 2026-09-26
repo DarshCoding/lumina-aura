@@ -7,6 +7,7 @@ const nav = [
   { href: "/admin/inventory", label: "Inventory" },
   { href: "/admin/billings", label: "Billings" },
   { href: "/admin/hampers", label: "Gift hampers" },
+  { href: "/admin/content", label: "Site content" },
 ];
 
 export function AdminShell() {

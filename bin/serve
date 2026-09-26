@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+HOST="${HOST:-127.0.0.1}"
+PORT="${PORT:-8000}"
+ROUTER="$ROOT/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php"
+cd "$ROOT/public"
+exec php \
+  -d upload_max_filesize=12M \
+  -d post_max_size=16M \
+  -S "${HOST}:${PORT}" \
+  "$ROUTER"

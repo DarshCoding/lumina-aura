@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Lummina Aura') }} — Handcrafted Candles</title>
     <meta name="description" content="Minimalist candle atelier. Hand-poured scents, quiet light, considered vessels.">
+    @viteReactRefresh
     @vite(['resources/css/app.css', 'resources/js/app.jsx'])
 </head>
 <body class="min-h-screen antialiased">

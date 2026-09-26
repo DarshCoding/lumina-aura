@@ -1,34 +1,69 @@
+import { sectionOr, usePageSections } from "@/hooks/usePageSections";
+
+const fallback = {
+  eyebrow: "Studio",
+  title: "Contact",
+  meta: {
+    visit: "Lummina Aura Studio\nBy appointment",
+    email: "hello@lumminaaura.com",
+    hours: "Monday – Saturday · 10:00 – 19:00",
+  },
+};
+
 export default function ContactPage() {
+  const { sections } = usePageSections("contact");
+  const content = sectionOr(fallback, sections.main);
+  const visitLines = (content.meta.visit || "").split("\n").filter(Boolean);
+
   return (
     <div className="pt-28 pb-24 md:pt-36 md:pb-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-        <p className="text-xs tracking-widest uppercase text-flame">Studio</p>
+        {content.eyebrow && (
+          <p className="text-xs tracking-widest uppercase text-flame">
+            {content.eyebrow}
+          </p>
+        )}
         <h1 className="mt-3 font-display text-4xl tracking-tight md:text-6xl">
-          Contact
+          {content.title}
         </h1>
         <div className="mt-16 grid gap-16 md:grid-cols-2">
           <div className="space-y-8 text-ink-muted">
-            <div>
-              <p className="text-xs tracking-widest uppercase text-ink">Visit</p>
-              <p className="mt-3 leading-relaxed">
-                Lummina Aura Studio
-                <br />
-                By appointment
-              </p>
-            </div>
-            <div>
-              <p className="text-xs tracking-widest uppercase text-ink">Email</p>
-              <a
-                href="mailto:hello@lumminaaura.com"
-                className="mt-3 block text-ink hover:text-flame"
-              >
-                hello@lumminaaura.com
-              </a>
-            </div>
-            <div>
-              <p className="text-xs tracking-widest uppercase text-ink">Hours</p>
-              <p className="mt-3">Monday – Saturday · 10:00 – 19:00</p>
-            </div>
+            {visitLines.length > 0 && (
+              <div>
+                <p className="text-xs tracking-widest uppercase text-ink">
+                  Visit
+                </p>
+                <p className="mt-3 leading-relaxed">
+                  {visitLines.map((line, i) => (
+                    <span key={i}>
+                      {i > 0 && <br />}
+                      {line}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            )}
+            {content.meta.email && (
+              <div>
+                <p className="text-xs tracking-widest uppercase text-ink">
+                  Email
+                </p>
+                <a
+                  href={`mailto:${content.meta.email}`}
+                  className="mt-3 block text-ink hover:text-flame"
+                >
+                  {content.meta.email}
+                </a>
+              </div>
+            )}
+            {content.meta.hours && (
+              <div>
+                <p className="text-xs tracking-widest uppercase text-ink">
+                  Hours
+                </p>
+                <p className="mt-3">{content.meta.hours}</p>
+              </div>
+            )}
           </div>
           <form className="space-y-6">
             <div>
